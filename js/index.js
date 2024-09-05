@@ -9,20 +9,31 @@
         'https://shorturl.at/BvnEK',
         'https://shorturl.at/2O68j',
         'https://shorturl.at/ymCxJ',
-        'https://shorturl.at/HjKHj',
-        'https://shorturl.at/eW5JK'
+        'https://shorturl.at/znJi7',
+        'https://shorturl.at/TmwSz'
+        
     ];
 
     let currentImageIndex = 0;
     const slider = document.getElementById('slider');
 
+  function loadImage(url, callback) {
+      const img = new Image();
+      img.src = url;
+      img.onload = () => callback(url); // Image loaded successfully
+      img.onerror = () => callback('fallback-image.jpg'); // Fallback image on error
+  }
+
+
     function changeImage() {
         currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
-        slider.style.backgroundImage = `url('${imageUrls[currentImageIndex]}')`;
+        loadImage(imageUrls[currentImageIndex], (url) => {
+          slider.style.backgroundImage = `url('${url}')`;
+      });
     }
 
     // Change image every 5 seconds
-    setInterval(changeImage, 5000);
+    setInterval(changeImage, 2500);
 });
 
   var card = $('card'),
