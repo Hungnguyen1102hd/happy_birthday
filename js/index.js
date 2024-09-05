@@ -3,6 +3,25 @@
     return document.getElementById(id);
   }
 
+  document.addEventListener("DOMContentLoaded", function() {
+    const imageUrls = [
+        'https://shorturl.at/NIJms',
+        'https://shorturl.at/BvnEK',
+        'https://shorturl.at/2O68j'
+    ];
+
+    let currentImageIndex = 0;
+    const slider = document.getElementById('slider');
+
+    function changeImage() {
+        currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
+        slider.style.backgroundImage = `url('${imageUrls[currentImageIndex]}')`;
+    }
+
+    // Change image every 5 seconds
+    setInterval(changeImage, 5000);
+});
+
   var card = $('card'),
       openB = $('open'),
       closeB = $('close'),

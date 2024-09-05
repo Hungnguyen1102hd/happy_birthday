@@ -107,6 +107,15 @@ font-family: 'Indie Flower', cursive;
           perspective: 5000px;
 }
 
+#slider {
+  width: 100%; /* Adjust as needed */
+  height: 400px; /* Adjust as needed */
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out; /* Transition effect */
+  position: relative;
+}
+
 #card-front:before {
   position: absolute;
   top: 0;
