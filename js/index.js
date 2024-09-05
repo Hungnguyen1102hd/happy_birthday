@@ -32,6 +32,7 @@
       timer = null;
   console.log('wat', card);
   openB.addEventListener('click', function () {
+    audio.play();
     card.setAttribute('class', 'open-half');
     if (timer) clearTimeout(timer);
     timer = setTimeout(function () {
