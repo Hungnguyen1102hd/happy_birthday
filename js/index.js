@@ -4,11 +4,14 @@
   }
 
   document.addEventListener("DOMContentLoaded", function() {
-    const images = [
-      { url: 'images/img_1.jpg', link: 'https://example.com/page1' },
-      { url: 'images/img_2.jpg', link: 'https://example.com/page2' },
-      { url: 'images/img_3.jpg', link: 'https://example.com/page3' }
-  ]
+    const imageUrls = [
+        'https://shorturl.at/NIJms',
+        'https://shorturl.at/BvnEK',
+        'https://shorturl.at/2O68j',
+        'https://shorturl.at/ymCxJ',
+        'https://shorturl.at/HjKHj',
+        'https://shorturl.at/eW5JK'
+    ];
 
     let currentImageIndex = 0;
     const slider = document.getElementById('slider');
