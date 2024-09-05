@@ -175,6 +175,16 @@ font-family: 'Indie Flower', cursive;
   display: none;
 }
 
+#canvas {
+  padding:0;
+  margin:0;
+}
+#div.btnbg {
+  position:fixed;
+  left:0;
+  top:0;
+}
+
 #card.open-half #card-front,
 #card.close-half #card-front {
   -webkit-transform: rotateY(-90deg);
