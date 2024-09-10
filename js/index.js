@@ -5,12 +5,17 @@
 
   document.addEventListener("DOMContentLoaded", function() {
     const imageUrls = [
-        'https://shorturl.at/NIJms',
-        'https://shorturl.at/BvnEK',
-        'https://shorturl.at/2O68j',
-        'https://shorturl.at/ymCxJ',
-        'https://shorturl.at/znJi7',
-        'https://shorturl.at/TmwSz'
+        'images/img_1.jpg',
+        'images/img_2.jpg',
+        'images/img_3.jpg',
+        'images/img_4.jpg',
+        'images/img_5.jpg',
+        'images/img_6.jpg',
+        'images/img_7.jpg',
+        'images/img_8.jpg',
+        // 'https://shorturl.at/ymCxJ',
+        // 'https://shorturl.at/znJi7',
+        // 'https://shorturl.at/TmwSz'
         
     ];
 
@@ -21,7 +26,7 @@
       const img = new Image();
       img.src = url;
       img.onload = () => callback(url); // Image loaded successfully
-      img.onerror = () => callback('fallback-image.jpg'); // Fallback image on error
+      img.onerror = () => callback('images/img_1.jpg'); // Fallback image on error
   }
 
 
