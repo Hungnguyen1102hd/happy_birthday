@@ -9,13 +9,6 @@
         'images/img_2.jpg',
         'images/img_3.jpg',
         'images/img_4.jpg',
-        'images/img_5.jpg',
-        'images/img_6.jpg',
-        'images/img_7.jpg',
-        'images/img_8.jpg',
-        // 'https://shorturl.at/ymCxJ',
-        // 'https://shorturl.at/znJi7',
-        // 'https://shorturl.at/TmwSz'
         
     ];
 
