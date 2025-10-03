@@ -1,64 +1,26 @@
+
 (function() {
   function $(id) {
     return document.getElementById(id);
   }
+  let audio = document.getElementById("audio");
+  let audioStatus = document.getElementById("audio-status");
 
-  document.addEventListener("DOMContentLoaded", function() {
-    const imageUrls = [
-        'images/img_1.jpg',
-        'images/img_2.jpg',
-        'images/img_3.jpg',
-        'images/img_4.jpg',
-        
-    ];
-
-    let currentImageIndex = 0;
-    const slider = document.getElementById('slider');
-
-  function loadImage(url, callback) {
-      const img = new Image();
-      img.src = url;
-      img.onload = () => callback(url); // Image loaded successfully
-      img.onerror = () => callback('images/img_1.jpg'); // Fallback image on error
-  }
-
-
-    function changeImage() {
-        currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
-        loadImage(imageUrls[currentImageIndex], (url) => {
-          slider.style.backgroundImage = `url('${url}')`;
-      });
+  // gán vào window để HTML onclick gọi được
+  window.toggleAudio = function() {
+    if (audio.paused) {
+      audio.play();
+      audioStatus.innerText = "Music is playing 🎶";
+    } else {
+      audio.pause();
+      audioStatus.innerText = "Click to play music";
     }
+  };
 
-    // Change image every 5 seconds
-    setInterval(changeImage, 2500);
-});
-
-  var card = $('card'),
-      openB = $('open'),
-      closeB = $('close'),
-      audio = $('audio'),
-      timer = null;
-  console.log('wat', card);
-  openB.addEventListener('click', function () {
-    audio.play();
-    card.setAttribute('class', 'open-half');
-    if (timer) clearTimeout(timer);
-    timer = setTimeout(function () {
-      card.setAttribute('class', 'open-fully');
-      timer = null;
-    }, 1000);
-  });
-
-
-  closeB.addEventListener('click', function () {
-    card.setAttribute('class', 'close-half');
-    if (timer) clearTimerout(timer);
-    timer = setTimeout(function () {
-      card.setAttribute('class', '');
-      timer = null;
-    }, 1000);
-  });
+// Khởi động WebGL sakura (giữ nguyên script gốc của bạn)
+window.onload = function() {
+  // gọi hàm initSakura() nếu có trong script gốc
+};
 
 
   // Utilities
